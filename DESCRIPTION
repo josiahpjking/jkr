@@ -1,0 +1,9 @@
+Package: jkr
+Title: Various functions I occasionally need.
+Version: 0.0.0.9000
+Authors@R: person("Josiah", "King", email = "josiahpjking@gmail.com", role = c("aut", "cre"))
+Description: bits a pieces.
+Depends: R (>= 3.4.1)
+License: What license is it under?
+LazyData: true
+RoxygenNote: 6.0.1.9000
