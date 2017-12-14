@@ -7,7 +7,7 @@
 #' @examples
 #' plottingdata <- make_tcplot_data(objects=c("easy_fix","diff_fix","vid_fix"),predictor="g_condition",data=e6data)
 
-make_tcplot_data<-function(objects,predictor,bin="CURRENT_BIN",data){
+make_tcplot_data<-function(objects,predictor,bin="CURRENT_BIN",bin_interval=20,data){
   require(ggplot2)
   require(plotrix)
   plot_data<-as.data.frame(list())

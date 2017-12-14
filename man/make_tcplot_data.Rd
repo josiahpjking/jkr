@@ -4,7 +4,8 @@
 \alias{make_tcplot_data}
 \title{time course plots for eye tracking}
 \usage{
-make_tcplot_data(objects, predictor, bin = "CURRENT_BIN", data)
+make_tcplot_data(objects, predictor, bin = "CURRENT_BIN", bin_interval = 20,
+  data)
 }
 \arguments{
 \item{objects}{vector of proportions of fixations to visual world AOIs (for eyelink trackers, the RIGHT_1_P, RIGHT_2_P,... columns)}
