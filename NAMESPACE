@@ -2,5 +2,6 @@
 
 export(create_proptable)
 export(ggCaterpillar)
+export(grid_arrange_shared_legend)
 export(make_tcplot_data)
 export(plot_eyes)
