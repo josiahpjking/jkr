@@ -26,7 +26,7 @@ create_proptable<-function(freq,var1,data){
   table.f$inthigh<-0
   names(table.f)[1]<-var1
   names(table.f)[3]<-freq
-  for (i in 1:nrow(tf)){
+  for (i in 1:nrow(table.f)){
     table.f$intlow[i]<-prop.test(table.f$n[i],table.f$totaln[i])$conf[1]
     table.f$inthigh[i]<-prop.test(table.f$n[i],table.f$totaln[i])$conf[2]
   }
