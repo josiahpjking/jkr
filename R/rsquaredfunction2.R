@@ -9,6 +9,10 @@
 #' @param mdl a fitted (generalized) linear (mixed) model object
 #' @return Implementing methods usually return a dataframe with "Class",
 #'         "Family", "Marginal", "Conditional", and "AIC" columns
+#' @export
+#' @examples
+#' 
+
 r.squared <- function(mdl){
   UseMethod("r.squared")
 }

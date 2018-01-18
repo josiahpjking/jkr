@@ -18,3 +18,6 @@ This method uses r.squared from \code{\link{summary}} as the marginal.
 Contrary to other \code{\link{r.squared}} methods, 
 this one doesn't call \code{\link{.rsquared.glmm}}
 }
+\examples{
+
+}

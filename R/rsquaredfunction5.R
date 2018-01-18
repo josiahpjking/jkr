@@ -16,6 +16,11 @@
 #' @param null.fixef Numeric vector containing the fixed effects of the null model.
 #'        Only necessary for "poisson" family
 #' @return A data frame with "Class", "Family", "Marginal", "Conditional", and "AIC" columns
+#' @export
+#' @examples
+#'
+
+
 .rsquared.glmm <- function(varF, varRand, varResid = NULL, varDisp = NULL, family, link,
                            mdl.aic, mdl.class, null.fixef = NULL){
   if(family == "gaussian"){

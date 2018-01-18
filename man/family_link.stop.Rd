@@ -9,3 +9,6 @@ family_link.stop(family, link)
 \description{
 stop execution if unable to calculate variance for a given family and link
 }
+\examples{
+
+}

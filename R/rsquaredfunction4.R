@@ -1,11 +1,14 @@
-
-
 #' Marginal and conditional r-squared for lme objects
 #'
 #' This method extracts the variance for fixed and random effects,
 #' as well as residuals, and calls \code{\link{.rsquared.glmm}}
 #'
 #' @param mdl an lme model (usually fit using \code{\link{nlme::lme}})
+#' @export
+#' @examples
+#' 
+
+
 r.squared.lme <- function(mdl){
   # Get design matrix of fixed effects from model
   Fmat <- model.matrix(eval(mdl$call$fixed)[-2], mdl$data)

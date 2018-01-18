@@ -35,3 +35,6 @@ and conditional r-squared, as well as the AIC for each glmm.
 Users should call the higher-level generic "r.squared", or implement a method for the
 corresponding class to get varF, varRand and the family from the specific object
 }
+\examples{
+
+}

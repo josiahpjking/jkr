@@ -7,6 +7,11 @@
 #' @param mdl an lm object (usually fit using \code{\link{lm}},
 #' @return a dataframe with with "Class" = "lm", "Family" = "gaussian",
 #'        "Marginal" = unadjusted r-squared, "Conditional" = NA, and "AIC" columns
+#' @export
+#' @examples
+#' 
+
+
 r.squared.lm <- function(mdl){
   data.frame(Class=class(mdl), Family="gaussian", Link="identity",
              Marginal=summary(mdl)$r.squared,

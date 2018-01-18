@@ -20,3 +20,6 @@ Currently implemented for \code{\link{lm}}, \code{\link{lmerTest::merMod}},
 and \code{\link{nlme::lme}} objects.
 Implementing methods usually call \code{\link{.rsquared.glmm}}
 }
+\examples{
+
+}

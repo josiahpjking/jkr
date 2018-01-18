@@ -7,6 +7,10 @@
 #' @param mdl an merMod model (usually fit using \code{\link{lme4::lmer}},
 #'        \code{\link{lme4::glmer}}, \code{\link{lmerTest::lmer}},
 #'        \code{\link{blme::blmer}}, \code{\link{blme::bglmer}}, etc)
+#' @export
+#' @examples
+
+
 r.squared.merMod <- function(mdl){
   # Get variance of fixed effects by multiplying coefficients by design matrix
   VarF <- var(as.vector(lme4::fixef(mdl) %*% t(mdl@pp$X)))
