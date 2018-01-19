@@ -4,15 +4,15 @@
 \alias{make_tcplot_data}
 \title{time course plots for eye tracking}
 \usage{
-make_tcplot_data(objects, predictor, bin = "CURRENT_BIN", bin_interval = 20,
-  data)
+make_tcplot_data(df, objects, predictor, bin = CURRENT_BIN,
+  bin_interval = 20)
 }
 \arguments{
-\item{objects}{vector of proportions of fixations to visual world AOIs (for eyelink trackers, the RIGHT_1_P, RIGHT_2_P,... columns)}
+\item{objects}{vector of string names of AOIs (for eyelink trackers, the RIGHT_1_P, RIGHT_2_P,... columns)}
 
-\item{predictor}{variable name (string) of experimental conditions.}
+\item{predictor}{variable name of experimental condition.}
 
-\item{bin}{BIN variable (for eyelink, this is the CURRENT_BIN column). Defaults to "CURRENT_BIN".}
+\item{bin}{BIN variable (for eyelink, this is the CURRENT_BIN column). Defaults to CURRENT_BIN.}
 
 \item{data}{dataset}
 }
@@ -20,5 +20,5 @@ make_tcplot_data(objects, predictor, bin = "CURRENT_BIN", bin_interval = 20,
 time course plots for eye tracking
 }
 \examples{
-plottingdata <- make_tcplot_data(objects=c("easy_fix","diff_fix","vid_fix"),predictor="g_condition",data=e6data)
+plottingdata <- make_tcplot_data(df=e6data, objects=c("easy_fix","diff_fix","vid_fix"),predictor=gesture)
 }
