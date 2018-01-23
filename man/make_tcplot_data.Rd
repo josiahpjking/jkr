@@ -4,11 +4,10 @@
 \alias{make_tcplot_data}
 \title{time course plots for eye tracking}
 \usage{
-make_tcplot_data(df, objects, predictor, bin = CURRENT_BIN,
-  bin_interval = 20)
+make_tcplot_data(df, AOIs, predictor, bin = CURRENT_BIN, bin_interval = 20)
 }
 \arguments{
-\item{objects}{vector of string names of AOIs (for eyelink trackers, the RIGHT_1_P, RIGHT_2_P,... columns)}
+\item{AOIs}{vector of string names of AOIs (for eyelink trackers, the RIGHT_1_P, RIGHT_2_P,... columns)}
 
 \item{predictor}{variable name of experimental condition.}
 

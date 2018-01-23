@@ -4,7 +4,7 @@
 \alias{tcplot}
 \title{time course plots for eye tracking}
 \usage{
-tcplot(df, xmin = 0, xmax = 2000, lcol = condition, ltype = object)
+tcplot(df, xmin = 0, xmax = 2000, lcol = "darkred", ltype = "solid")
 }
 \arguments{
 \item{df}{a dataframe in long format from the make_tcplot_data function}
