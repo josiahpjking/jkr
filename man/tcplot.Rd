@@ -4,16 +4,16 @@
 \alias{tcplot}
 \title{time course plots for eye tracking}
 \usage{
-tcplot(df, xmin = 0, xmax = 2000, lcol = "darkred", ltype = "solid")
+tcplot(df, xmin = 0, xmax = 2000, lcol = "AOI", ltype = "condition")
 }
 \arguments{
 \item{df}{a dataframe in long format from the make_tcplot_data function}
 
 \item{xmin, xmax}{min and max time boundaries. (ROI)}
 
-\item{lcol}{= line colours variable.}
+\item{lcol}{= line colours variable, string.}
 
-\item{ltype}{= line type variable.}
+\item{ltype}{= line type variable, string.}
 }
 \description{
 time course plots for eye tracking
