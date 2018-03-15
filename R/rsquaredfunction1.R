@@ -8,7 +8,7 @@
 #'        \code{\link{lme4::glmer}}, \code{\link{lmerTest::lmer}},
 #'        \code{\link{blme::blmer}}, \code{\link{blme::bglmer}}, etc)
 #' @export
-#' @examples
+
 
 
 r.squared.merMod <- function(mdl){

@@ -3,7 +3,7 @@
 #' @param y the values to be matched against
 #' @export
 #' @examples
-#' c(1,2,3) %notin% c(2,4,6) returns TRUE, FALSE, TRUE
+#' 1:4 %notin% 2:5 returns TRUE, FALSE, FALSE, FALSE
 `%notin%` <- function(x,y){
   !(x %in% y)
 } 
