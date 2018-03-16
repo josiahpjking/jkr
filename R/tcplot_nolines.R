@@ -5,17 +5,16 @@
 #' @param ltype = line type variable, string.
 #' @export
 #' @examples
-#' tcplot(plotting_data, -1000, 4000)
-#' tcplot(plotting_data, -1000, 4000)+facet_wrap(~condition)
-tcplot<-function(df,xmin=0,xmax=2000,lcol="AOI",ltype="AOI"){
-  tplot = ggplot(data = df, aes_string(x = "time", y = "mean_prop", colour=lcol, fill=lcol, lty=ltype))+
+#' tcplot_nolines(plotting_data, -1000, 4000)
+#' tcplot_nolines(plotting_data, -1000, 4000)+facet_wrap(~condition)
+tcplot_nolines<-function(df,xmin=0,xmax=2000,lcol="AOI"){
+  tplot = ggplot(data = df, aes_string(x = "time", y = "mean_prop", colour=lcol, fill=lcol))+
     xlim(xmin, xmax) + ylim(0, 1) + 
     xlab("Time (ms)") + ylab("Proportion of fixations to AOIs.") + 
     geom_line(lwd = 1.5) + 
-    scale_linetype_manual(values=1:6)+
     scale_colour_manual(values=c("#f8a232","#b932f8","#a59b93","#2ec9b1"))+
     scale_fill_manual(values=c("#f8a232","#b932f8","#a59b93","#2ec9b1"))+
     geom_ribbon(data = df, aes_string(x = "time", ymin = "low", ymax = "up"), colour = NA, alpha = 0.2, lwd = 1.5)
-
+  
   return(tplot)
 }

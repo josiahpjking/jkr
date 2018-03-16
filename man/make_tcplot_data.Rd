@@ -20,5 +20,5 @@ make_tcplot_data(df, AOIs, predictor, bin = "CURRENT_BIN",
 time course plots for eye tracking
 }
 \examples{
-plottingdata <- make_tcplot_data(df=e6data, objects=c("easy_fix","diff_fix","vid_fix"),predictor=gesture)
+plottingdata <- make_tcplot_data(df=e6data, AOIs=c("easy_fix","diff_fix","vid_fix"),predictor="gesture")
 }

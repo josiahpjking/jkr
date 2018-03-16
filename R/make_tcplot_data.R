@@ -5,7 +5,7 @@
 #' @param data dataset
 #' @export
 #' @examples
-#' plottingdata <- make_tcplot_data(df=e6data, objects=c("easy_fix","diff_fix","vid_fix"),predictor=gesture)
+#' plottingdata <- make_tcplot_data(df=e6data, AOIs=c("easy_fix","diff_fix","vid_fix"),predictor="gesture")
 
 make_tcplot_data<-function(df, AOIs, predictor, bin="CURRENT_BIN", bin_interval=20){
   require(tidyverse)
