@@ -21,5 +21,3 @@ mod_plot2a <- function(df, dv, iv, mdl){
   return(new_plot)
 }
 
-new_plot
-
