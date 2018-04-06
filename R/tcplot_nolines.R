@@ -12,8 +12,6 @@ tcplot_nolines<-function(df,xmin=0,xmax=2000,lcol="AOI"){
     xlim(xmin, xmax) + ylim(0, 1) + 
     xlab("Time (ms)") + ylab("Proportion of fixations to AOIs.") + 
     geom_line(lwd = 1.5) + 
-    scale_colour_manual(values=c("#f8a232","#b932f8","#a59b93","#2ec9b1"))+
-    scale_fill_manual(values=c("#f8a232","#b932f8","#a59b93","#2ec9b1"))+
     geom_ribbon(data = df, aes_string(x = "time", ymin = "low", ymax = "up"), colour = NA, alpha = 0.2, lwd = 1.5)
   
   return(tplot)
