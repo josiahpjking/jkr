@@ -8,6 +8,7 @@
 #' tcplot(plotting_data, -1000, 4000)
 #' tcplot(plotting_data, -1000, 4000)+facet_wrap(~condition)
 tcplot<-function(df,xmin=0,xmax=2000,lcol="AOI",ltype="AOI"){
+  require(ggplot2)
   tplot = ggplot(data = df, aes_string(x = "time", y = "mean_prop", colour=lcol, fill=lcol, lty=ltype))+
     xlim(xmin, xmax) + ylim(0, 1) + 
     xlab("Time (ms)") + ylab("Proportion of fixations to AOIs.") + 

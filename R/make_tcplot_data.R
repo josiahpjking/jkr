@@ -8,7 +8,6 @@
 #' plottingdata <- make_tcplot_data(df=e6data, AOIs=c("easy_fix","diff_fix","vid_fix"),predictor="gesture")
 
 make_tcplot_data<-function(df, AOIs, predictor, bin="CURRENT_BIN", bin_interval=20){
-  require(tidyverse)
   plotdat<-as.data.frame(list())
   for (i in AOIs){
     x<-aggregate(df[,i],by=list(df[,bin], df[,predictor]),FUN=mean)
