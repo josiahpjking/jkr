@@ -9,12 +9,12 @@
 #' @param useNA whether or not NAs should be included. passed to table(). useNA controls if the table includes counts of NA values: the allowed values correspond to never ("no"), only if the count is positive ("ifany") and even for zero counts ("always").
 #' @export
 #' @examples
-#' prop_group_table(stroke,age,gender,...,includeNA="ifany")
+#' prop_group_table(mydata, stroke, age, gender, ... , includeNA="ifany")
 
 prop_group_table<-function(df, outcome,...,includeNA="no",confint=TRUE){
 	outcome = enquo(outcome)
 	group_variables = enquos(...)
-	outcome_name = quo_name(outcome)
+	
 	df %>% group_by(!!!group_variables) %>%
 	dplyr::summarise(
 	proportion = list(prop.table(table(!!outcome,useNA=includeNA))),
@@ -22,6 +22,7 @@ prop_group_table<-function(df, outcome,...,includeNA="no",confint=TRUE){
 	groupN = sum(table(!!outcome,useNA=includeNA))
 	) %>%
 	tidyr::unnest() -> ptab
+	
 	if(confint==TRUE){
 	    ptab %>%
 	    rowwise() %>%
@@ -29,7 +30,6 @@ prop_group_table<-function(df, outcome,...,includeNA="no",confint=TRUE){
 	        ci_low = prop.test(proportion*groupN, 	groupN)$conf.int[1],
 	        ci_high = prop.test(proportion*groupN, 	groupN)$conf.int[2]
 	      ) -> ptab
-  }
+	}
   return(ptab)
-
 }
