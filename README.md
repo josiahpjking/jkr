@@ -7,12 +7,12 @@ Package of various functions which will slowly grow..
 ## things included:
 
 ### For plotting time courses of eye and mouse tracking data
-make_tcplot_data, tcplot, tcplot_nolines
+make_tcplotdata, tcplot, tcplot_nolines
 
 ### equivalent of SAS's SUM (basically rowSums with na.rm=T, except for when entire row of NAs, which returns NA, not 0)
 rowSums_na
 
-### tables with prop.test for groups. 
+### quick tables with prop.test for groups. and confints
 create_proptable
 
 ### and others..

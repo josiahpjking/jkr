@@ -4,8 +4,8 @@
 \alias{.rsquared.glmm}
 \title{Marginal and conditional r-squared for glmm given fixed and random variances}
 \usage{
-.rsquared.glmm(varF, varRand, varResid = NULL, varDisp = NULL, family, link,
-  mdl.aic, mdl.class, null.fixef = NULL)
+.rsquared.glmm(varF, varRand, varResid = NULL, varDisp = NULL, family,
+  link, mdl.aic, mdl.class, null.fixef = NULL)
 }
 \arguments{
 \item{varF}{Variance of fixed effects}

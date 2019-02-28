@@ -12,8 +12,6 @@ tcplot_nolines(df, xmin = 0, xmax = 2000, lcol = "AOI")
 \item{xmin, xmax}{min and max time boundaries. (ROI)}
 
 \item{lcol}{= line colours variable, string.}
-
-\item{ltype}{= line type variable, string.}
 }
 \description{
 time course plots for eye tracking
