@@ -7,15 +7,16 @@
 #' @param data dataset
 #' @export
 #' @examples
-#' plottingdata <- make_tcplotdata(df,AOIs=c(refprop,disprop),subj=Participant,fluency, gesture)
+#' plottingdata <- make_tcplotdata(df,AOIs=c(refprop,disprop),subj=Participant,fluency,gesture)
+#' tcplot(plottingdata,0,2000,lty=fluency)+facet_wrap(~gesture)
 make_tcplotdata<-function(df,AOIs,subj,...,bin=CURRENT_BIN, bin_interval=20){
   subj=enquo(subj)
   bin=enquo(bin)
   AOIs=enquo(AOIs)
   df %>% gather(key="AOI",value="prop",!!(AOIs)) %>%
-  group_by(AOI,!!subj,...,!!bin) %>%
+    group_by(AOI,!!subj,...,!!bin) %>%
     summarise(
-      meanaoi=mean(prop),
+      meanaoi=mean(prop)
     ) %>% group_by(...,!!bin,AOI) %>%
     summarise(
       mean_prop=mean(meanaoi),
@@ -24,6 +25,6 @@ make_tcplotdata<-function(df,AOIs,subj,...,bin=CURRENT_BIN, bin_interval=20){
       up=mean_prop+se
     ) %>% mutate(
       time=!!bin*bin_interval
-    )
+    ) %>% ungroup()
 }
 

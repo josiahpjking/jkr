@@ -24,5 +24,6 @@ make_tcplotdata(df, AOIs, subj, ..., bin = CURRENT_BIN,
 time course plots for eye tracking computes avg proportion and by subject standard errors.
 }
 \examples{
-plottingdata <- make_tcplotdata(df,AOIs=c(refprop,disprop),subj=Participant,fluency, gesture)
+plottingdata <- make_tcplotdata(df,AOIs=c(refprop,disprop),subj=Participant,fluency,gesture)
+tcplot(plottingdata,0,2000,lty=fluency)+facet_wrap(~gesture)
 }

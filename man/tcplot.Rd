@@ -2,23 +2,26 @@
 % Please edit documentation in R/tcplot.R
 \name{tcplot}
 \alias{tcplot}
-\title{time course plots for eye tracking}
+\title{time course plots for eye tracking
+defaults to colour by AOI.}
 \usage{
-tcplot(df, xmin = 0, xmax = 2000, lcol = "AOI", ltype = "AOI")
+tcplot(df, xmin = 0, xmax = 2000, col = AOI, lty = NULL,
+  x = time, y = mean_prop, ymin = low, ymax = up)
 }
 \arguments{
-\item{df}{a dataframe in long format from the make_tcplot_data function}
+\item{df}{a dataframe in long format from the make_tcplotdata function}
 
-\item{xmin, xmax}{min and max time boundaries. (ROI)}
+\item{xmin, xmax}{min and max time boundaries. (ROI/IP)}
 
-\item{lcol}{= line colours variable, string.}
+\item{col}{= line colours variable name}
 
-\item{ltype}{= line type variable, string.}
+\item{lty}{= line type variable name}
 }
 \description{
 time course plots for eye tracking
+defaults to colour by AOI.
 }
 \examples{
-tcplot(plotting_data, -1000, 4000)
-tcplot(plotting_data, -1000, 4000)+facet_wrap(~condition)
+tcplot(plotting_data, -1000, 1000)
+tcplot(plotting_data, -1000, 1000,col=fluency, lty=AOI)
 }
