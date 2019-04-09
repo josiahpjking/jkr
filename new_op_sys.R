@@ -3,3 +3,4 @@
 install.packages(c("curl","RCurl","rsconnect","devtools","tidyverse","shiny","shinydashboard","plotly","rmarkdown","knitr","caTools","lme4","arm","rio"))
 
 #rio?
+#rio::install_formats()
