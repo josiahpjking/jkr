@@ -1,6 +1,6 @@
 #sudo apt-get install r-base r-base-dev 
 #sudo apt-get install libcurl4-openssl-dev libssl-dev libxml2-dev
-install.packages(c("curl","RCurl","rsconnect","devtools","tidyverse"))
+install.packages(c("curl","RCurl","rsconnect","devtools","tidyverse","conflicted"))
 
 #rmarkdown stuff
 install.packages(c("rmarkdown","knitr","caTools"))
