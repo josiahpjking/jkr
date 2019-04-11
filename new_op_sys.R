@@ -6,7 +6,7 @@ install.packages(c("curl","RCurl","rsconnect","devtools","tidyverse","conflicted
 install.packages(c("rmarkdown","knitr","caTools"))
 
 #shiny/plotly etc.
-install.packages(c("shiny","shinydashboard","plotly"))
+install.packages(c("shiny","shinydashboard","plotly","leaflet"))
 
 #various things for data 
 install.packages(c("rvest","here","rio","jsonlite"))
