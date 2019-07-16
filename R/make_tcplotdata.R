@@ -16,11 +16,11 @@ make_tcplotdata<-function(df,AOIs,subj,...,bin=CURRENT_BIN, bin_interval=20){
   df %>% gather(key="AOI",value="prop",!!(AOIs)) %>%
     group_by(AOI,!!subj,...,!!bin) %>%
     summarise(
-      meanaoi=mean(prop)
+      meanaoi=mean(prop,na.rm=T)
     ) %>% group_by(...,!!bin,AOI) %>%
     summarise(
-      mean_prop=mean(meanaoi),
-      se=sd(meanaoi)/sqrt(n()),
+      mean_prop=mean(meanaoi,na.rm=T),
+      se=sd(meanaoi,na.rm=T)/sqrt(n()),
       low=mean_prop-se,
       up=mean_prop+se
     ) %>% mutate(
