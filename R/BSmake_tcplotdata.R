@@ -1,6 +1,6 @@
-#' time course plots for eye tracking computes avg proportion and BOOTSTRAPPED by subject 95% CIs (for Dale).
+#' time course plots for eye tracking computes avg proportion and BOOTSTRAPPED by subject 95\% CIs (for Dale).
 #' @param df dataframe
-#' @param AOIs column names of AOIs (for eyelink trackers, the RIGHT_1_P, RIGHT_2_P,... columns)
+#' @param AOIs columnnames of AOIs (for eyelink trackers, the RIGHT_1_P, RIGHT_2_P,... columns)
 #' @param subj participant column
 #' @param ... variable names of experimental conditions
 #' @param bin BIN variable (for eyelink, this is the CURRENT_BIN column). Defaults to "CURRENT_BIN".
