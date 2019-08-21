@@ -6,11 +6,12 @@
 #' @param bin BIN variable (for eyelink, this is the CURRENT_BIN column). Defaults to "CURRENT_BIN".
 #' @param bin_interval the time of each bin
 #' @param n bootstrap samples. so.. R really..
+#' @param level confidence level, .95 by default
 #' @export
 #' @examples
-#' plottingdata <- BSmake_tcplotdata(df,AOIs=c(refprop,disprop),subj=Participant,n=1000,fluency,gesture)
+#' plottingdata <- BSmake_tcplotdata(df,AOIs=c(refprop,disprop),subj=Participant,fluency,gesture,n=1000)
 #' tcplot(plottingdata,0,2000,lty=fluency)+facet_wrap(~gesture)
-BSmake_tcplotdata<-function(df,AOIs,subj,n=100,...,bin=CURRENT_BIN, bin_interval=20){
+BSmake_tcplotdata<-function(df,AOIs,subj,n=100,...,bin=CURRENT_BIN, bin_interval=20,level=.95){
   subj=enquo(subj)
   bin=enquo(bin)
   AOIs=enquo(AOIs)
@@ -27,7 +28,7 @@ BSmake_tcplotdata<-function(df,AOIs,subj,n=100,...,bin=CURRENT_BIN, bin_interval
     plyr::ldply() %>%
     group_by(AOI,...,!!bin) %>%
     summarise(
-      bs_SE=qnorm(.975)*sd(smean)
+      bs_SE=qnorm(1-((1-level)/2))*sd(smean)
     ) %>%
     left_join(.,
               df %>%

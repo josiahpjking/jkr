@@ -1,7 +1,7 @@
 #' rowSums with na.rm = TRUE except for when all cols = NAs
 #' equivalent to sum functionality in SAS (I think)
 #' @param x an array of two or more dimensions, containing numeric, complex, integer or logical values, or a numeric data frame. For .colSums() etc, a numeric, integer or logical matrix (or vector of length m * n).
-#' @param dims integer: Which dimensions are regarded as ‘rows’ or ‘columns’ to sum over. For row, the sum or mean is over dimensions dims+1, ...; for col it is over dimensions 1:dims.
+#' @param dims integer: Which dimensions are regarded as 'rows' or 'columns' to sum over. For row, the sum or mean is over dimensions dims+1, ...; for col it is over dimensions 1:dims.
 #' @export
 #' @examples
 #' x <- cbind(x1 = c(NA,2:5), x2 = c(NA,7:9,NA))
@@ -20,9 +20,9 @@ rowSums_na<-function(x, dims=1){
   if (is.data.frame(x))
     x <- as.matrix(x)
   if (!is.array(x) || length(dn <- dim(x)) < 2L)
-    stop("'x' must be an array of at least two dimensions")
+    stop("x must be an array of at least two dimensions")
   if (dims < 1 || dims > length(dn) - 1)
-    stop("invalid 'dims'")
+    stop("invalid dims")
   p <- prod(dn[-(id <- seq_len(dims))])
   dn <- dn[id]
   #sum NAs across rows
