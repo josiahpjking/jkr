@@ -17,7 +17,7 @@ tcplot<-function(df,xmin=0,xmax=2000,col=AOI,lty=NULL,x=time,y=mean_prop,ymin=lo
   lty=enquo(lty)
   require(ggplot2)
   tplot = ggplot(data = df, aes(x = !!x, y = !!y, colour=!!col, fill=!!col, lty=!!lty))+
-    xlim(xmin, xmax) + ylim(0, 1) +
+    xlim(xmin, xmax) +
     xlab("Time") +
     geom_line(lwd = 1.5) +
     geom_ribbon(data = df, aes(x = !!x, ymin = !!ymin, ymax = !!ymax), colour = NA, alpha = 0.2, lwd = 1.5)+
