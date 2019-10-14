@@ -5,13 +5,11 @@
 \title{time course plots for eye tracking
 defaults to colour by AOI.}
 \usage{
-tcplot(df, xmin = 0, xmax = 2000, col = AOI, lty = NULL,
-  x = time, y = mean_prop, ymin = low, ymax = up)
+tcplot(df, col = AOI, lty = NULL, x = time, y = mean_prop,
+  ymin = low, ymax = up)
 }
 \arguments{
 \item{df}{a dataframe in long format from the make_tcplotdata function}
-
-\item{xmin, xmax}{min and max time boundaries. (ROI/IP)}
 
 \item{col}{= line colours variable name}
 
