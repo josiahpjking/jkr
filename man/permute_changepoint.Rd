@@ -3,7 +3,7 @@
 \name{permute_changepoint}
 \alias{permute_changepoint}
 \title{returns a permutation based distribution of possible changepoint values of X.
-fits gam with n knots, find changepoint, loop(shuffles residuals, fits new gam, find changepoint)}
+fits gam with n knots, find changepoint, loop(new gam for (fitted+shuffled residuals)~x, find changepoint)}
 \usage{
 permute_changepoint(df, y, x, npoints, iter)
 }
