@@ -4,8 +4,16 @@
 \alias{BSmake_tcplotdata}
 \title{time course plots for eye tracking computes avg proportion and BOOTSTRAPPED by subject 95\% CIs (for Dale).}
 \usage{
-BSmake_tcplotdata(df, AOIs, subj, n = 100, ..., bin = CURRENT_BIN,
-  bin_interval = 20, level = 0.95)
+BSmake_tcplotdata(
+  df,
+  AOIs,
+  subj,
+  n = 100,
+  ...,
+  bin = CURRENT_BIN,
+  bin_interval = 20,
+  level = 0.95
+)
 }
 \arguments{
 \item{df}{dataframe}

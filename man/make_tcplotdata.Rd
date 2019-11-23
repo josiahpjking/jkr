@@ -4,8 +4,7 @@
 \alias{make_tcplotdata}
 \title{time course plots for eye tracking computes avg proportion and by subject standard errors.}
 \usage{
-make_tcplotdata(df, AOIs, subj, ..., bin = CURRENT_BIN,
-  bin_interval = 20)
+make_tcplotdata(df, AOIs, subj, ..., bin = CURRENT_BIN, bin_interval = 20)
 }
 \arguments{
 \item{df}{dataframe}

@@ -4,8 +4,12 @@
 \alias{grid_arrange_shared_legend}
 \title{grid arrange (from gridExtra) with common legend}
 \usage{
-grid_arrange_shared_legend(..., nrow = 1, ncol = length(list(...)),
-  position = c("bottom", "right"))
+grid_arrange_shared_legend(
+  ...,
+  nrow = 1,
+  ncol = length(list(...)),
+  position = c("bottom", "right")
+)
 }
 \arguments{
 \item{...}{list of ggplot objects}
