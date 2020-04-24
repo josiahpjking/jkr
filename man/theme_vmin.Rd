@@ -4,7 +4,7 @@
 \alias{theme_vmin}
 \title{very minimal theme}
 \usage{
-theme_vmin()
+theme_vmin(mode = "light")
 }
 \description{
 very minimal theme

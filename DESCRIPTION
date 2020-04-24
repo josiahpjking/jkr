@@ -6,4 +6,4 @@ Description: bits a pieces.
 Depends: R (>= 3.4.1)
 License: What license is it under?
 LazyData: true
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.0
