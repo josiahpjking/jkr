@@ -35,6 +35,7 @@ uoepsy_rmd_funcs <- function(filepath, excludechunks="echo=FALSE") {
       }
     }
     tokens <- unlist(tokens)
+    tokens <- tokens[nchar(tokens)>=1]
     if (!any_unpacked) break
   }
   file.remove("tmp.R")
