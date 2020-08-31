@@ -4,12 +4,11 @@
 #'
 #' @export
 insertqsol <- function() {
-  rstudioapi::insertText("
-  `r qbegin()`
+  rstudioapi::insertText("`r qbegin()`
+  
+`r qend()`
+`r solbegin(show=params$SHOW_SOLS, toggle=params$TOGGLE)`
 
-  `r qend()`
-  `r solbegin(show=params$SHOW_SOLS, toggle=params$TOGGLE)`
-
-  `r solend()`
-  ")
+`r solend()`
+")
 }
