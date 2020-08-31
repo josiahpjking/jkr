@@ -2,16 +2,18 @@
 % Please edit documentation in R/uoepsy_rmd_funcs.R
 \name{uoepsy_rmd_funcs}
 \alias{uoepsy_rmd_funcs}
-\title{get a quick list of all functions used in Rmd. Will exclude echo=FALSE chunks on premise that students aren't presented with these, so we often put more complicated plotting stuff in there.}
+\title{get a quick list of all functions used in Rmd. Will exclude echo=FALSE chunks on premise that students aren't presented with these, so we often put more complicated plotting stuff in there. Will also auto exclude include=FALSE.}
 \usage{
-uoepsy_rmd_funcs(filepath, excludechunks = "echo=FALSE")
+uoepsy_rmd_funcs(filepath, excludechunks = NULL)
 }
 \arguments{
 \item{filepath}{rmd document for lab/lecture}
+
+\item{excludechunks}{knitr options to exclude}
 }
 \description{
-get a quick list of all functions used in Rmd. Will exclude echo=FALSE chunks on premise that students aren't presented with these, so we often put more complicated plotting stuff in there.
+get a quick list of all functions used in Rmd. Will exclude echo=FALSE chunks on premise that students aren't presented with these, so we often put more complicated plotting stuff in there. Will also auto exclude include=FALSE.
 }
 \examples{
-uoepsy_rmd_funcs("01-slr.Rmd")
+uoepsy_rmd_funcs("01-slr.Rmd", excludechunks=c("echo=FALSE","include=FALSE"))
 }
